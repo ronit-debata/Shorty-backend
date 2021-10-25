@@ -9,7 +9,9 @@ const ObjectId = mongodb.ObjectId;
 
 const url = "mongodb+srv://ronit:ronit123@cluster0.rcs55.mongodb.net/url-shortener?retryWrites=true&w=majority";
 
-app.use(cors());
+app.use(cors({
+  origin: '*'
+}));
 app.use(express.json());
 
 app.post("/shorturl", async (req, res) => {
